@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right,rgb(221, 80, 80),rgba(51, 128, 51, 0.555),rgb(95, 95, 189));
+    animation-name: gradientAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    overflow: hidden;
+    background-size: 400% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.dictionary-ctn{
+    width: 65%;
+    padding: 2rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search-input{
+    background-color: white;
+    border: 2px solid black;
+    height: 50px;
+    width: 80%;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.clear svg{
+    height: 15px;
+    width: 15px;
+    
+}
+.search-icon svg{
+    height: 20px;
+    width: 20px;
+    fill: gray;
+}
+.audio svg{
+    height: 20px;
+    width: 20px;
+    fill: gray;
+}
+input{
+    height: 45px;
+    width: 90%;
+    outline: 0;
+    border: none;
+}
+.word-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+.word{
+    font-size: 25px;
+    font-weight: 700;
+}
+.speech-work{
+    font-size: 15px;
+    font-style: italic;
+}
+.meanings{
+    padding: 10px;
+}
+.button{
+    height: 50px;
+    width: 10rem;
+    border-radius: 25px;
+    margin: 20px 0;
+    background-color: rgba(53, 53, 167, 0.897);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: 0;
+}
+
+/*mobile screen responsiveness */
+
+@media (max-width: 400px) {
+    .dictionary-ctn{
+        height: 100vh;
+        width: 100%;
+    }
+}
